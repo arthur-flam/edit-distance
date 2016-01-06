@@ -18,9 +18,8 @@ def edit_distance(s, t):
                 if i_t > 0:
                     d = min(d, distances[i_s - 1, i_t - 1] + int(s[i_s-1]!=t[i_t-1]) )
             distances[i_s, i_t] = d
-    return distances[len(s)-1, len(t)-1]
-# djikstra
-# dynamic programming
+    return distances[len(s), len(t)]
+
 
 
 
